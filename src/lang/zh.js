@@ -22,30 +22,30 @@ export default {
       key3: '评',
       text1: '当前分类总记录数',
       text2: '当前上传的附件数',
-      text3: '评论次数'
+      text3: '评论次数',
     },
     data2: {
       column1: '今日注册',
       column2: '今日登录',
       column3: '今日订阅',
-      column4: '今日评论'
+      column4: '今日评论',
     },
     data3: {
       column1: '转化率（日同比 28%）',
       column2: '签到率（日同比 11%）',
-      column3: '签到率（日同比 11%）'
+      column3: '签到率（日同比 11%）',
     },
     data4: {
       column1: '错误日志',
       column2: '数据展示',
       column3: '权限管理',
-      column4: '用户管理'
+      column4: '用户管理',
     },
     table: {
       rw: '工作任务',
       nr: '工作内容',
-      sj: '工作时间'
-    }
+      sj: '工作时间',
+    },
   },
   route: {
     info: '个人信息',
@@ -63,7 +63,7 @@ export default {
     data: '数据展示',
     permission: '权限',
     error: '异常页面',
-    test: '测试页面'
+    test: '测试页面',
   },
   login: {
     title: '登录 ',
@@ -96,13 +96,14 @@ export default {
     language: '中英文',
     notice: '消息通知',
     theme: '主题',
-    color: '换色'
+    color: '换色',
   },
   tagsView: {
     search: '搜索',
-    menu: '更多',
-    clearCache: '清除缓存',
+    menu: '页签操作',
+    clearCache: '关闭右侧',
     closeOthers: '关闭其它',
-    closeAll: '关闭所有'
-  }
-}
+    closeAll: '关闭所有',
+    closeRight: '关闭右侧',
+  },
+};

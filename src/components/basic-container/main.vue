@@ -1,7 +1,9 @@
 <template>
-  <div class="basic-container"
-       :style="styleName"
-       :class="{'basic-container--block':block}">
+  <div
+    class="basic-container"
+    :style="styleName"
+    :class="{ 'basic-container--block': block }"
+  >
     <el-card class="basic-container__card">
       <slot></slot>
     </el-card>
@@ -10,28 +12,27 @@
 
 <script>
 export default {
-  name: "basicContainer",
+  name: 'basicContainer',
   props: {
     radius: {
       type: [String, Number],
-      default: 10
+      default: 10,
     },
     background: {
-      type: String
+      type: String,
     },
     block: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   computed: {
-    styleName () {
+    styleName() {
       return {
-        borderRadius: this.setPx(this.radius),
         background: this.background,
-      }
-    }
-  }
+      };
+    },
+  },
 };
 </script>
 

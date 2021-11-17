@@ -1,33 +1,32 @@
 <template>
   <div class="avue-logo">
     <transition name="fade">
-      <span v-if="keyCollapse"
-            class="avue-logo_subtitle"
-            key="0">
-        {{website.logo}}
+      <span v-if="keyCollapse" class="avue-logo_subtitle" key="0">
+        {{ website.logo }}
       </span>
     </transition>
     <transition-group name="fade">
       <template v-if="!keyCollapse">
-        <span class="avue-logo_title"
-              key="1">{{website.indexTitle}} </span>
+        <div class="avue-logo_title" key="1">
+          <img src="./../../../public/img/97.png" alt="" />
+        </div>
       </template>
     </transition-group>
   </div>
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters } from 'vuex';
 export default {
-  name: "logo",
+  name: 'logo',
   data() {
     return {};
   },
   created() {},
   computed: {
-    ...mapGetters(["website", "keyCollapse"])
+    ...mapGetters(['website', 'keyCollapse']),
   },
-  methods: {}
+  methods: {},
 };
 </script>
 
