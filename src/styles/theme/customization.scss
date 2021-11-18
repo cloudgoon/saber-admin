@@ -1,3 +1,4 @@
+@import '../variables.scss';
 .theme-customization {
   .avue-header,
   .avue-logo {
@@ -159,8 +160,8 @@
       }
 
       .avue-tags .el-tabs--card > .el-tabs__header .el-tabs__item.is-active {
-        color: #4363ec;
-        border-top: 3px solid #4363ec;
+        color: $mainBg;
+        border-top: 3px solid $mainBg;
         border-bottom: none;
         background-color: #f8f8f8;
         height: 60px;
@@ -237,8 +238,8 @@
   }
 
   .el-button--primary {
-    background-color: #4363ec;
-    border-color: #4363ec;
+    background-color: $mainBg;
+    border-color: $mainBg;
 
     &:hover,
     &:focus {
@@ -253,7 +254,7 @@
   }
 
   .el-button--text {
-    color: #4363ec;
+    color: $mainBg;
     font-size: 14px;
     &:hover,
     &:focus {
@@ -359,7 +360,7 @@
   .el-pagination.is-background .el-pager li {
     background-color: transparent;
     border: 1px solid #dcdee2;
-    color: #4363ec;
+    color: $mainBg;
     line-height: 28px;
   }
 
@@ -371,8 +372,8 @@
 
   .el-pagination.is-background .el-pager li:not(.disabled).active {
     background-color: transparent;
-    border: 1px solid #4363ec;
-    color: #4363ec;
+    border: 1px solid $mainBg;
+    color: $mainBg;
   }
 
   .el-pagination.is-background .btn-next.disabled,
@@ -426,15 +427,15 @@
     }
 
     .el-tabs__item.is-active {
-      color: #4363ec;
+      color: $mainBg;
     }
 
     .el-tabs__active-bar {
-      background-color: #4363ec;
+      background-color: $mainBg;
     }
 
     .el-tabs__item:hover {
-      color: #4363ec;
+      color: $mainBg;
     }
   }
 
@@ -468,22 +469,41 @@
   .el-button--default.is-plain:focus,
   .el-button--default.is-plain:hover {
     background: #fff;
-    border-color: #4363ec;
-    color: #4363ec;
+    border-color: $mainBg;
+    color: $mainBg;
   }
 
   .el-input.is-active .el-input__inner,
   .el-input__inner:focus {
-    border-color: #4363ec;
+    border-color: $mainBg;
     outline: 0;
   }
 
   .el-select .el-input.is-focus .el-input__inner {
-    border-color: #4363ec;
+    border-color: $mainBg;
   }
 
   .el-range-editor.is-active,
   .el-range-editor.is-active:hover {
-    border-color: #4363ec;
+    border-color: $mainBg;
+  }
+
+  .el-input--small .el-input__icon {
+    line-height: 33px;
+    font-size: 14px;
+  }
+
+  .avue-crud__right {
+    .el-input-group__append {
+      padding: 0 10px !important;
+      background-color: transparent;
+      color: #606266;
+      cursor: pointer;
+
+      &:hover {
+        border: 1px solid $mainBg;
+        transform: translateX(-1px);
+      }
+    }
   }
 }

@@ -101,9 +101,12 @@ export default {
   tagsView: {
     search: '搜索',
     menu: '页签操作',
+    refresh: '刷新',
     clearCache: '关闭右侧',
-    closeOthers: '关闭其它',
+    closeOthers: '关闭其它标签页',
     closeAll: '关闭所有',
-    closeRight: '关闭右侧',
+    closeRight: '关闭右侧标签页',
+    closeLeft: '关闭左侧标签页',
+    closeCurrent: '关闭标签页',
   },
 };

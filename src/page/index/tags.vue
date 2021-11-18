@@ -43,11 +43,17 @@
           <i class="el-icon-arrow-down el-icon--right"></i>
         </el-button>
         <el-dropdown-menu slot="dropdown">
+          <el-dropdown-item @click.native="refreshTag">
+            {{ $t('tagsView.refresh') }}
+          </el-dropdown-item>
+          <el-dropdown-item @click.native="clseCurrentTag">
+            {{ $t('tagsView.closeCurrent') }}
+          </el-dropdown-item>
           <el-dropdown-item @click.native="closeOthersTags">
             {{ $t('tagsView.closeOthers') }}
           </el-dropdown-item>
-          <el-dropdown-item @click.native="closeAllTags">
-            {{ $t('tagsView.closeAll') }}
+          <el-dropdown-item @click.native="closeLeftTags">
+            {{ $t('tagsView.closeLeft') }}
           </el-dropdown-item>
           <el-dropdown-item @click.native="closeRightTags">
             {{ $t('tagsView.closeRight') }}
@@ -160,9 +166,25 @@ export default {
       this.$store.commit('DEL_TAG_OTHER');
     },
 
+    clseCurrentTag() {
+      this.contextmenuFlag = false;
+      this.$store.commit('DEL_CURRENT_TAG');
+      this.$router.push({
+        path: this.$router.$avueRouter.getPath({
+          src: this.tagWel.value,
+        }),
+        query: this.tagWel.query,
+      });
+    },
+
     closeRightTags() {
       this.contextmenuFlag = false;
       this.$store.commit('DEL_TAG_RIGHT');
+    },
+
+    closeLeftTags() {
+      this.contextmenuFlag = false;
+      this.$store.commit('DEL_TAG_LEFT');
     },
     findTag(value) {
       let tag, key;
@@ -195,6 +217,10 @@ export default {
           this.$message.success('清除完毕');
         });
       });
+    },
+
+    refreshTag() {
+      window.location.reload();
     },
   },
 };

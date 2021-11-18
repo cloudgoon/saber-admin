@@ -55,6 +55,19 @@ const navs = {
       state.tagList = [state.tagWel];
       setStore({ name: 'tagList', content: state.tagList });
     },
+
+    DEL_CURRENT_TAG: (state) => {
+      state.tagList = state.tagList.filter((item) => {
+        if (item.value !== state.tag.value) {
+          return true;
+        }
+      });
+
+      setFistTag(state.tagList);
+      setStore({ name: 'tagList', content: state.tagList });
+      console.log('state.tag.value :>> ', state.tag.value);
+      console.log('state.tagList :>> ', state.tagList);
+    },
     DEL_TAG_OTHER: (state) => {
       state.tagList = state.tagList.filter((item) => {
         if (item.value === state.tag.value) {
@@ -79,6 +92,24 @@ const navs = {
           return true;
         } else {
           return false;
+        }
+      });
+      setFistTag(state.tagList);
+      setStore({ name: 'tagList', content: state.tagList });
+    },
+
+    DEL_TAG_LEFT: (state) => {
+      let cindex = state.tagList.findIndex((item) => {
+        return item.value === state.tag.value;
+      });
+      state.tagList = state.tagList.filter((item, index) => {
+        if (index >= cindex) {
+          return true;
+        } else if (
+          !website.isFirstPage &&
+          item.value === website.fistPage.value
+        ) {
+          return true;
         }
       });
       setFistTag(state.tagList);

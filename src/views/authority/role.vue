@@ -481,6 +481,7 @@ export default {
 
   div {
     cursor: pointer;
+    transform: translateY(-7px);
   }
 
   &:hover {
