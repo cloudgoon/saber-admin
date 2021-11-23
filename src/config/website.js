@@ -29,6 +29,7 @@ export default {
     group: [],
     close: false,
   },
+
   //配置菜单的属性
   menu: {
     iconDefault: 'iconfont icon-caidan',
